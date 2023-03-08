@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 2_2</title>
+    <style>
+      .container {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      td {
+        color: rgb(76, 76, 166);
+      }
+      .inset {
+        border: inset;
+      }
+      .outset {
+        border: outset;
+      }
+      table {
+        width: 400px;
+        background-color: rgb(243, 243, 162);
+      }
+      th {
+        padding-left: 4px;
+        text-align: left;
+        background-color: aquamarine;
+        color: blue;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <table>
+          <tr>
+            <th colspan="2">ĐĂNG KÝ HỌC VIÊN</th>
+          </tr>
+          <tr>
+            <td>Họ và tên</td>
+            <td>
+              <input
+                type="text"
+                name="yourname"
+                class="inset"
+                style="width: 180px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Ngày sinh</td>
+            <td><input type="date" name="birthday" class="inset" /></td>
+          </tr>
+          <tr>
+            <td>Giới tính</td>
+            <td style="color: black">
+              <input type="radio" name="gender" id="" class="inset" />Nam
+              <input type="radio" name="gender" class="inset" />Nữ
+            </td>
+          </tr>
+          <tr>
+            <td style="display: block">Địa chỉ</td>
+            <td>
+              <input
+                type="text"
+                name="address"
+                class="inset"
+                style="width: 150px; height: 60px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Lớp</td>
+            <td>
+              <select name="class" id="" class="inset">
+                <option value="">-Chọn lớp-</option>
+                <option value="">Lớp A</option>
+                <option value="">Lớp B</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                class="inset"
+                style="width: 120px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Điện thoại</td>
+            <td>
+              <input
+                type="number"
+                name="phone"
+                class="inset"
+                style="width: 120px"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Đăng kí" class="outset" />
+              <input type="reset" value="Nhập lại" class="outset" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

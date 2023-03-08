@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 1</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        background-color: rgba(169, 242, 245, 0.97);
+        padding: 16px 32px;
+      }
+      h1 {
+        background-color: rgb(255, 102, 0);
+        color: #fff;
+        text-align: center;
+        font-weight: 400;
+        margin: 8px;
+        margin-top: 0;
+      }
+      .content {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        padding-top: 8px;
+      }
+      .form {
+        display: flex;
+      }
+      .form .title_form {
+        color: blue;
+        flex: 0.2;
+        text-align: right;
+        margin-right: 16px;
+      }
+      .form .input_form {
+        flex: 0.8;
+        margin-bottom: 16px;
+      }
+      .input_form .hobby {
+        display: flex;
+      }
+      .input_form .hobby .row {
+        margin-right: 16px;
+        color: rgb(255, 98, 0);
+      }
+      input {
+        margin-top: 16px;
+      }
+      .hobby input,
+      .inset {
+        border: inset;
+      }
+      .outset {
+        border: outset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="title">
+          <h1>SỞ THÍCH CỦA BẠN</h1>
+        </div>
+        <div class="form">
+          <div class="title_form">
+            <p>Họ và tên</p>
+            <p>Email</p>
+            <p>Sở thích</p>
+          </div>
+          <div class="input_form">
+            <input type="text" name="yourname" class="inset" /> <br />
+            <input type="email" name="email" class="inset" /> <br />
+            <div class="hobby">
+              <div class="row_1 row">
+                <input type="checkbox" name="hobby" />Thể thao <br />
+                <input type="checkbox" name="hobby" />Lướt web <br />
+                <input type="checkbox" name="hobby" />Du lịch
+              </div>
+              <div class="row_2 row">
+                <input type="checkbox" name="hobby" />Âm nhạc <br />
+                <input type="checkbox" name="hobby" />Chơi game
+              </div>
+              <div class="row_3 row">
+                <input type="checkbox" name="hobby" />Đọc sách <br />
+                <input type="checkbox" name="hobby" />Điện ảnh
+              </div>
+            </div>
+            <input type="submit" value="Gửi thông tin" class="outset" />
+            <input type="reset" value="Nhập lại" class="outset" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
