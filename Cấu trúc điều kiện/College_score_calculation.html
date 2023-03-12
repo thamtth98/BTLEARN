@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College score calculation</title>
+    <style>
+      #result {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tính điểm ĐH khối D</h2>
+    <form>
+      <p>
+        Môn Toán
+        <input type="number" id="Math" />
+      </p>
+      <p>
+        Môn Văn
+        <input type="number" id="Literature" />
+      </p>
+      <p>
+        Môn Anh
+        <input type="number" id="English" />
+      </p>
+      <p>
+        Khu vực
+        <select name="" id="select">
+          <option value="KV1">KV1</option>
+          <option value="KV2">KV2</option>
+          <option value="KV2-NT">KV2-NT</option>
+          <option value="KV3">KV3</option>
+        </select>
+      </p>
+      <input type="button" value="Tính điểm" onclick="getResult()" ; />
+      <p id="result"></p>
+      <script>
+        function getResult() {
+          let math = parseFloat(document.getElementById("Math").value);
+          let literature = parseFloat(
+            document.getElementById("Literature").value
+          );
+          let english = parseFloat(document.getElementById("English").value);
+          let area = document.getElementById("select").value;
+          switch (area) {
+            case "KV1":
+              result.innerHTML = `Tổng điểm ĐH khối D của bạn là ${
+                math + literature + english + 0.75
+              }`;
+              break;
+            case "KV2-NT":
+              result.innerHTML = `Tổng điểm ĐH khối D của bạn là ${
+                math + literature + english + 0.5
+              }`;
+              break;
+            case "KV2":
+              result.innerHTML = `Tổng điểm ĐH khối D của bạn là ${
+                math + literature + english + 0.25
+              }`;
+              break;
+            default:
+              result.innerHTML = `Tổng điểm ĐH khối D của bạn là ${
+                math + literature + english
+              }`;
+          }
+        }
+      </script>
+    </form>
+  </body>
+</html>
