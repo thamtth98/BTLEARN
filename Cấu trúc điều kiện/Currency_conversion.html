@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency conversion</title>
+    <style>
+      #name1,
+      #name2,
+      #name3 {
+        margin: 100px;
+        font-weight: bold;
+      }
+      #fromCurrency {
+        margin-left: 200px;
+      }
+      #toCurrency {
+        margin-left: 220px;
+      }
+      #covert {
+        background-color: rgb(93, 93, 221);
+        margin-left: 50px;
+        padding: 0 10px 0px 10px;
+        color: white;
+      }
+      #displayresult{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div>
+        <span id="name1">Amount</span>
+        <span id="name2">From Currency</span>
+        <span id="name3">To Currency</span>
+      </div>
+      <span>
+        <input type="number" id="number" />
+        <select name="" id="fromCurrency">
+          <option value="VietNam1">VietNam</option>
+          <option value="USD1">USD</option>
+        </select>
+        <select name="" id="toCurrency">
+          <option value="VietNam2">VietNam</option>
+          <option value="USD2">USD</option>
+        </select>
+        <input type="button" value="Convert" id="covert" onclick="result()" />
+        <p id="displayresult"></p>
+
+        <script>
+          function result() {
+            let number = document.getElementById("number").value;
+            let fromCurrency = document.getElementById("fromCurrency").value;
+            let toCurrency = document.getElementById("toCurrency").value;
+            console.log(number);
+            console.log(fromCurrency);
+            console.log(toCurrency);
+
+            if ((fromCurrency == "VietNam1") & (toCurrency == "USD2")) {
+              displayresult.innerHTML = `Result: ${number * 0.000042}`;
+            } else if (
+              (fromCurrency == "VietNam1") &
+              (toCurrency == "VietNam2")
+            ) {
+              displayresult.innerHTML = `Result: ${number * 1}`;
+            } else {
+              displayresult.innerHTML = `Result: ${number / 0.000042}`;
+            }
+            if ((fromCurrency == "USD1") & (toCurrency == "VietNam2")) {
+              displayresult.innerHTML = `Result: ${number / 0.000042}`;
+            } else if ((fromCurrency == "USD1") & (toCurrency == "USD2")) {
+              displayresult.innerHTML = `Result: ${number * 1}`;
+            } else {
+              displayresult.innerHTML = `Result: ${number * 0.000042}`;
+            }
+          }
+        </script>
+      </span>
+    </form>
+  </body>
+</html>
